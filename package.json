@@ -1,0 +1,9 @@
+{
+  "name": "vue3-electron-boilerplate",
+  "version": "1.0.0",
+  "description": "election boilerplate with vue3",
+  "main": "index.js",
+  "repository": "git@github.com:Styx11/vue3-electron-boilerplate.git",
+  "author": "styx11 <1654630248@qq.com>",
+  "license": "MIT"
+}

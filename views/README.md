@@ -1,5 +1,12 @@
 Demo repo for vue-test-utils-next + TS + vue-jest.
 
-1. `yarn install`
-2. `yarn test` to run tests.
-3. `yarn webpack-dev-server` for development mode.
+```sh
+# install dependencies
+yarn
+
+# run unit tests
+yarn test:unit
+
+# open project in dev mode
+yarn dev
+```

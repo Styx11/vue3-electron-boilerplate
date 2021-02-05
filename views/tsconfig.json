@@ -9,11 +9,11 @@
 		"allowSyntheticDefaultImports": true,
 		"allowJs": true,
 		"sourceMap": true,
-		"baseUrl": ".",
 		"types": [
 			"webpack-env"
 			// "jest"
 		],
+		"baseUrl": "." /* Base directory to resolve non-absolute module names. */,
 		"paths": {
 			"@/*": [
 				"src/*"

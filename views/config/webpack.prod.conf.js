@@ -1,9 +1,9 @@
 const { resolve } = require('./utils');
 const merge = require('webpack-merge');
+const Dotenv = require('dotenv-webpack');
 const baseConfig = require('./webpack.base.conf');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 
 module.exports = merge(baseConfig, {
 	mode: "production",
@@ -63,6 +63,9 @@ module.exports = merge(baseConfig, {
 					}
 				}
 			]
+		}),
+		new Dotenv({
+			path: resolve('env/production:test.env'),
 		}),
 	]
 });

@@ -5,6 +5,7 @@ const path = require('path');
 const URI = require('uri-js');
 const { resolve } = require('./utils');
 const merge = require('webpack-merge');
+const Dotenv = require('dotenv-webpack');
 const baseConfig = require('./webpack.base.conf');
 const ESLintPlugin = require('eslint-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -81,6 +82,10 @@ module.exports = merge(baseConfig, {
 
 		new ESLintPlugin({
 			files: '../src',
+		}),
+
+		new Dotenv({
+			path: resolve('env/development.env'),
 		}),
 	]
 })

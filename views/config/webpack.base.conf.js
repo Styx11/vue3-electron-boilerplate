@@ -1,12 +1,8 @@
-const path = require('path')
 const utils = require('./utils');
 const resolve = utils.resolve;
-const Dotenv = require('dotenv-webpack');
 const { VueLoaderPlugin } = require('vue-loader');
 const tsImportPluginFactory = require('ts-import-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-const DEV = process.env.NODE_ENV === 'development';
 
 module.exports = {
 	entry: {
@@ -15,7 +11,7 @@ module.exports = {
 	output: {
 		path: resolve('dist/'),
 		filename: '[name].js',
-		publicPath: DEV ? '/' : process.env.PUBLIC_URL || '',
+		publicPath: '/',
 	},
 	target: 'web',
 	module: {
@@ -119,10 +115,7 @@ module.exports = {
 			filename: 'static/css/[name].[contenthash].css',
 		}),
 
-		new Dotenv({
-			// path: utils.resolve(__dirname, `env/${process.env.NODE_ENV}.env`),
-			path: path.resolve(__dirname, '..', `env/${process.env.NODE_ENV}.env`),
-		}),
+
 
 	]
 }

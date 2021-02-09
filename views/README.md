@@ -9,4 +9,7 @@ yarn test:unit
 
 # open project in dev mode
 yarn dev
+
+# build prod source
+yarn build:prod
 ```

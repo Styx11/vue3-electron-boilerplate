@@ -82,6 +82,7 @@ typings/
 .nuxt
 dist
 bld
+release-builds
 
 # Gatsby files
 .cache/
